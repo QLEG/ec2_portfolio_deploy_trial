@@ -44,4 +44,11 @@ group :production do
   gem 'pg', '1.1.4'
 end
 
+group :production, :staging do
+    gem 'unicorn'
+    gem 'mysql2'
+end
+
+gem 'dotenv-rails'
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
